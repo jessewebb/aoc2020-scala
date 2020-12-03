@@ -9,6 +9,8 @@ object Program extends App {
     val expenses = input.split('\n').map(_.trim.toInt).toList
     val answer1 = Part1.solve(expenses)
     println(s"Part 1: $answer1")
+    val answer2 = Part2.solve(expenses)
+    println(s"Part 2: $answer2")
   }
 
   solveDay01()

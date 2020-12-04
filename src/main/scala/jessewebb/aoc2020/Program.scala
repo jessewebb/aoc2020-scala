@@ -17,9 +17,12 @@ object Program extends App {
     println("Day 02\n======")
     import jessewebb.aoc2020.day02._
     val input = PuzzleInput.Day02
-    val passwordsAndPolicies = input.split('\n').map(Part1.parseInput).toList
-    val answer1 = Part1.solve(passwordsAndPolicies)
+    val passwordsAndPolicies1 = input.split('\n').map(Part1.parseInput).toList
+    val answer1 = Part1.solve(passwordsAndPolicies1)
     println(s"Part 1: $answer1")
+    val passwordsAndPolicies2 = input.split('\n').map(Part2.parseInput).toList
+    val answer2 = Part2.solve(passwordsAndPolicies2)
+    println(s"Part 2: $answer2")
   }
 
 //  solveDay01()

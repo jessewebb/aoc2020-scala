@@ -1,16 +1,18 @@
 package jessewebb.aoc2020.day02
 
-object Part1 {
+object Part2 {
 
   type Password = String
-  case class PasswordPolicy(min: Int, max: Int, char: Char)
+
+  case class PasswordPolicy(pos1: Int, pos2: Int, char: Char)
+
   type Answer = Int
 
   def parseInput(lineOfInput: String): (Password, PasswordPolicy) = {
     val regex = """(\d+)-(\d+)\s(\w):\s(\w*)""".r
     lineOfInput match {
-      case regex(minStr, maxStr, charStr, password) =>
-        (password, PasswordPolicy(minStr.toInt, maxStr.toInt, charStr.charAt(0)))
+      case regex(pos1Str, pos2Str, charStr, password) =>
+        (password, PasswordPolicy(pos1Str.toInt, pos2Str.toInt, charStr.charAt(0)))
     }
   }
 
@@ -23,6 +25,6 @@ object Part1 {
     }
 
   private[day02] def isPasswordValid(password: Password, policy: PasswordPolicy): Boolean =
-    policy.min to policy.max contains password.count(_ == policy.char)
+    (password.charAt(policy.pos1-1) == policy.char) != (password.charAt(policy.pos2-1) == policy.char)
 
 }

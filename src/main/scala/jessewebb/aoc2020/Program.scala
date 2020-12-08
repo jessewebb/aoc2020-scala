@@ -25,7 +25,17 @@ object Program extends App {
     println(s"Part 2: $answer2")
   }
 
+  def solveDay03(): Unit = {
+    println("Day 03\n======")
+    import jessewebb.aoc2020.day03._
+    val input = PuzzleInput.Day03
+    val grid = input.split('\n').map(_.toCharArray.toList).toList
+    val answer1 = Part1.solve(grid)
+    println(s"Part 1: $answer1")
+  }
+
 //  solveDay01()
-  solveDay02()
+//  solveDay02()
+  solveDay03()
 
 }

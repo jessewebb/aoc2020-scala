@@ -32,6 +32,8 @@ object Program extends App {
     val grid = input.split('\n').map(_.toCharArray.toList).toList
     val answer1 = Part1.solve(grid)
     println(s"Part 1: $answer1")
+    val answer2 = Part2.solve(grid)
+    println(s"Part 2: $answer2")
   }
 
 //  solveDay01()

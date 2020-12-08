@@ -1,6 +1,6 @@
 package jessewebb.aoc2020.day03
 
-import jessewebb.aoc2020.day03.Part1.Slope
+import jessewebb.aoc2020.day03.Slope
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
@@ -12,7 +12,7 @@ class Part1Test extends AnyFunSuite with Matchers {
       List('.', '.'),
     )
     val slope = Slope(1, 1)
-    val count = Part1.countTreesInSlope(grid)(slope)
+    val count = countTreesInSlope(grid)(slope)
     count shouldBe 0
   }
 
@@ -23,7 +23,7 @@ class Part1Test extends AnyFunSuite with Matchers {
       List('.', '.', '.'),
     )
     val slope = Slope(1, 1)
-    val count = Part1.countTreesInSlope(grid)(slope)
+    val count = countTreesInSlope(grid)(slope)
     count shouldBe 1
   }
 
@@ -34,7 +34,7 @@ class Part1Test extends AnyFunSuite with Matchers {
       List('.', '.', '.'),
     )
     val slope = Slope(2, 1)
-    val count = Part1.countTreesInSlope(grid)(slope)
+    val count = countTreesInSlope(grid)(slope)
     count shouldBe 0
   }
 
@@ -52,8 +52,7 @@ class Part1Test extends AnyFunSuite with Matchers {
       List('#','.','.','.','#','#','.','.','.','.','#'),
       List('.','#','.','.','#','.','.','.','#','.','#'),
     )
-    val slope = Slope(3, 1)
-    val count = Part1.countTreesInSlope(grid)(slope)
+    val count = Part1.solve(grid)
     count shouldBe 7
   }
 }

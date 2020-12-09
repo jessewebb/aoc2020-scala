@@ -36,8 +36,18 @@ object Program extends App {
     println(s"Part 2: $answer2")
   }
 
+  def solveDay04(): Unit = {
+    println("Day 04\n======")
+    import jessewebb.aoc2020.day04._
+    val input = PuzzleInput.Day04
+    val passports = Part1.parseInput(input)
+    val answer1 = Part1.solve(passports)
+    println(s"Part 1: $answer1")
+  }
+
 //  solveDay01()
 //  solveDay02()
-  solveDay03()
+//  solveDay03()
+  solveDay04()
 
 }

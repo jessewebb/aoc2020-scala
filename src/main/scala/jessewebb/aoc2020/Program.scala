@@ -40,9 +40,12 @@ object Program extends App {
     println("Day 04\n======")
     import jessewebb.aoc2020.day04._
     val input = PuzzleInput.Day04
-    val passports = Part1.parseInput(input)
-    val answer1 = Part1.solve(passports)
+    val passports1 = Part1.parseInput(input)
+    val answer1 = Part1.solve(passports1)
     println(s"Part 1: $answer1")
+    val passports2 = Part2.parseInput(input)
+    val answer2 = Part2.solve(passports2)
+    println(s"Part 2: $answer2")
   }
 
 //  solveDay01()

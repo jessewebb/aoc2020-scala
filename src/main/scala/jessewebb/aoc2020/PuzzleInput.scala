@@ -8,6 +8,7 @@ object PuzzleInput {
   lazy val Day02: String = getResourceAsString("inputs/day02.txt")
   lazy val Day03: String = getResourceAsString("inputs/day03.txt")
   lazy val Day04: String = getResourceAsString("inputs/day04.txt")
+  lazy val Day05: String = getResourceAsString("inputs/day05.txt")
 
   private def getResourceAsString(resource: String): String = {
     val inputStream = getClass.getClassLoader.getResourceAsStream(resource)
